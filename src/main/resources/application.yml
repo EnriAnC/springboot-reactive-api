@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      port: 8080
+      database: blog-codea-bkn
+      uri: mongodb+srv://enrianc:MZRveNU1BAUfM9bo@login-register-cluster.0bfhssr.mongodb.net/
+    graphql:
+      graphiql:
+        mapping: /graphiql
+        endpoint:
+          graphql: /graphql
+        enabled: true
