@@ -1,10 +1,10 @@
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+
 FROM openjdk:17-jdk-slim-buster
 
 COPY . /app
 
 WORKDIR ./app
-
-ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 
 RUN ./gradlew build
 
