@@ -2,6 +2,8 @@ FROM openjdk:17-jdk-slim-buster
 
 WORKDIR /app
 
+copy . /app
+
 RUN app/gradlew build
 
 ARG JAR_FILE=./build/libs/app-0.0.1-SNAPSHOT.jar
