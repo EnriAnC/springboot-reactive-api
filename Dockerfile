@@ -2,6 +2,8 @@ FROM openjdk:17-jdk-slim-buster
 
 WORKDIR /app
 
+COPY gradlew /app/
+
 # Copiar el contenido del proyecto (excepto la carpeta build)
 COPY . /app
 RUN ./gradlew bootJar
