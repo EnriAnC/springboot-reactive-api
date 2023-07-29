@@ -1,8 +1,9 @@
 FROM openjdk:17-jdk-slim-buster
 
+WORKDIR ./app
+
 COPY . /app
 
-WORKDIR ./app
 RUN ./gradlew clean
 RUN ./gradlew build
 
