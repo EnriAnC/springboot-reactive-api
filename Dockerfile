@@ -1,6 +1,6 @@
 FROM openjdk:17-jdk-slim-buster
 
-WORKDIR /app
+WORKDIR ./app
 
 COPY . ./
 
