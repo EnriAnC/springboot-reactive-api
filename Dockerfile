@@ -2,6 +2,8 @@ FROM openjdk:17-jdk-slim-buster
 
 WORKDIR /app
 
+COPY . /app
+
 RUN chmod +x gradlew
 RUN ./gradlew build
 
