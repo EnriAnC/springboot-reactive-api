@@ -38,8 +38,6 @@ springBoot {
 }
 jar {
 	enabled = false
-	baseName = 'app'
-	version = '0.0.1'
 }
 
 tasks.named('test') {
