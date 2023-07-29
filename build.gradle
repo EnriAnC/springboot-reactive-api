@@ -36,6 +36,7 @@ dependencies {
 springBoot {
 	mainClass = 'com.blogcodeabkn.backend.BlogCodeaBknBackendApplication'
 }
+
 jar {
 	enabled = false
 }
