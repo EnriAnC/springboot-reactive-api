@@ -1,3 +1,5 @@
+ARG CACHEBUST=1
+
 FROM openjdk:17-jdk-slim-buster
 
 COPY . /app
