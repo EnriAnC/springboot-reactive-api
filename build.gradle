@@ -36,9 +36,13 @@ dependencies {
 springBoot {
 	mainClass = 'com.blogcodeabkn.backend.BlogCodeaBknBackendApplication'
 }
+jar {
+	enabled = false
+	baseName = 'app'
+	version = '0.0.1'
+}
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
 
-tasks.jar { enabled = false }

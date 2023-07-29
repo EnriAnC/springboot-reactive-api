@@ -6,7 +6,7 @@ RUN ./gradlew build
 
 COPY . ./
 
-COPY ./build/libs/app-0.0.1-SNAPSHOT.jar ./app.jar
+COPY ./build/libs/app-0.0.1.jar ./app.jar
 ENV TZ="America/Santiago"
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
