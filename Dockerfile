@@ -10,7 +10,7 @@ COPY build.gradle /app/
 RUN chmod +x gradlew
 RUN ./gradlew build && java -jar build/libs/app-0.0.1-SNAPSHOT.jar
 
-ARG JAR_FILE=app/build/libs/app-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=/app/build/libs/app-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} /app/app.jar
 ENV TZ="America/Santiago"
 EXPOSE 8080
