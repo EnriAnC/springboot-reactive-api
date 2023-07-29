@@ -2,9 +2,9 @@ FROM openjdk:17-jdk-slim-buster
 
 WORKDIR ./app
 
-COPY . ./
-
 RUN ./gradlew build
+
+COPY . ./
 
 COPY ./build/libs/app-0.0.1-SNAPSHOT.jar ./app.jar
 ENV TZ="America/Santiago"
