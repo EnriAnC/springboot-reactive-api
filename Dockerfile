@@ -11,7 +11,7 @@ COPY build.gradle /app/
 RUN chmod +x gradlew
 RUN ./gradlew build
 
-COPY ${JAR_FILE} /app/app.jar
+COPY ${JAR_FILE}/app/app.jar
 ENV TZ="America/Santiago"
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
