@@ -36,7 +36,9 @@ dependencies {
 springBoot {
 	mainClass = 'com.blogcodeabkn.backend.BlogCodeaBknBackendApplication'
 }
-
+bootJar {
+	archiveFileName = 'app-0.0.1-SNAPSHOT.jar'
+}
 jar {
 	enabled = false
 }
