@@ -4,7 +4,7 @@ COPY . /app
 
 WORKDIR ./app
 
-RUN ./gradlew bootBuildImage --imageName=spring-boot-reactive
+RUN ./gradlew bootBuildImage
 
 ARG JAR_FILE=./build/libs/*.jar
 COPY ${JAR_FILE} ./app.jar
