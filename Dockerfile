@@ -8,9 +8,7 @@ COPY gradle /app/gradle
 COPY build.gradle /app/
 
 RUN chmod +x gradlew
-RUN ./gradlew build
-
-RUN java -jar build/libs/app-0.0.1-SNAPSHOT.jar
+RUN ./gradlew build && java -jar build/libs/app-0.0.1-SNAPSHOT.jar
 
 ARG JAR_FILE=build/libs/app-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} /app/app.jar
