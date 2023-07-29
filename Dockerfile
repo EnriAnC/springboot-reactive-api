@@ -1,5 +1,5 @@
 FROM openjdk:17-jdk-slim-buster
-ARG JAR_FILE=build/libs/*.jar
+ARG JAR_FILE=build/libs/blog-codea-bkn-0.0.1-SNAPSHOT.jar.jar
 
 WORKDIR /app
 
