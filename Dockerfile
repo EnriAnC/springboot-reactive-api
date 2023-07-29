@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
+RUN chmod +x gradlew
 RUN ./gradlew build
 
 ARG JAR_FILE="build/libs/*.jar"
