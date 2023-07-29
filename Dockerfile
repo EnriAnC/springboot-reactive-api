@@ -1,11 +1,9 @@
-ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
-
 FROM openjdk:17-jdk-slim-buster
 
 COPY . /app
 
 WORKDIR ./app
-
+RUN ./gradlew clean
 RUN ./gradlew build
 
 ARG JAR_FILE=./build/libs/app-0.0.1-SNAPSHOT.jar
