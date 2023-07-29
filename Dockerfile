@@ -4,7 +4,9 @@ COPY . /app
 
 WORKDIR ./app
 
-RUN --mount=type=no-cache ./gradlew build
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+
+RUN ./gradlew build
 
 ARG JAR_FILE=./build/libs/app-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} ./app.jar
