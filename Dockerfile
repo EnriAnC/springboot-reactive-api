@@ -1,12 +1,10 @@
-ARG CACHEBUST=1
-
 FROM openjdk:17-jdk-slim-buster
 
 COPY . /app
 
 WORKDIR ./app
 
-RUN ./gradlew build
+RUN --mount=type=cache,target=/root/.gradle ./gradlew build
 
 ARG JAR_FILE=./build/libs/app-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} ./app.jar
