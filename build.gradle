@@ -33,6 +33,10 @@ dependencies {
 	testImplementation 'org.springframework.graphql:spring-graphql-test'
 }
 
+springBoot {
+	mainClass = 'com.blogcodeabkn.backend'
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
